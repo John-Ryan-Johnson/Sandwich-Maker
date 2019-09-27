@@ -1,11 +1,11 @@
 import utilities from '../helpers/utilities.js'
 
 const condiments = [
-  {id:"condiment1", name:"ranch", price:".50"},
-  {id:"condiment2", name:"mustard", price:".50"},
-  {id:"condiment3", name:"mayo", price:".60"},
-  {id:"condiment4", name:"salt", price:".40"},
-  {id:"condiment5", name:"pepper", price:".40"}
+  {id:"condiment1", name:"Ranch", price:".50"},
+  {id:"condiment2", name:"Mustard", price:".50"},
+  {id:"condiment3", name:"Mayo", price:".60"},
+  {id:"condiment4", name:"Salt", price:".40"},
+  {id:"condiment5", name:"Pepper", price:".40"}
 ];
 
 const getSelectedCondiments = () => {
@@ -22,6 +22,7 @@ const getSelectedCondiments = () => {
   
 };
 
+
 const printCondimentOptions = () => {
   let domString = '';
   for(let i = 0; i < condiments.length; i++){
@@ -29,12 +30,10 @@ const printCondimentOptions = () => {
     <input type="checkbox" class="form-check-input condiment" id=${condiments[i].id}>
     <label class="form-check-label" for=${condiments[i].id}">${condiments[i].name}</label>
   </div>`
-  }
-  
- 
 
   utilities.printToDom('condiment-counter',domString )
+  }
 };
 
 
-export default { printCondimentOptions, getSelectedCondiments };
+export default { printCondimentOptions, getSelectedCondiments};

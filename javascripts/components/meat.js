@@ -1,11 +1,11 @@
 import utilities from '../helpers/utilities.js'
 
 const meats = [
-  {id:"meat1", name:"turkey", price:"3.00"},
-  {id:"meat2", name:"ham", price:"3.00"},
-  {id:"meat3", name:"chicken", price:"3.00"},
-  {id:"meat4", name:"tuna", price:"2.00"},
-  {id:"meat5", name:"roast beef", price:"3.50"}
+  {id:"meat1", name:"Turkey", price:"3.00"},
+  {id:"meat2", name:"Ham", price:"3.00"},
+  {id:"meat3", name:"Chicken", price:"3.00"},
+  {id:"meat4", name:"Tuna", price:"2.00"},
+  {id:"meat5", name:"Roast Beef", price:"3.50"}
 ];
 
 const getSelectedMeats = () => {
@@ -30,11 +30,9 @@ const printMeatOptions = () => {
     <input type="checkbox" class="form-check-input meat" id=${meats[i].id}>
     <label class="form-check-label" for=${meats[i].id}">${meats[i].name}</label>
   </div>`
-  }
-  
- 
 
   utilities.printToDom('meat-counter',domString )
+  }
 };
 
 
