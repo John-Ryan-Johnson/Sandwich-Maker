@@ -1,9 +1,10 @@
-import condiments from './condiments.js'
-import veggies from './veggies.js'
+import cheese from './cheese.js';
 import bread from './bread.js';
 import meat from './meat.js';
-import cheese from './cheese.js';
+import veggie from './veggies.js';
+import condiment from './condiments.js';
 import utilities from '../helpers/utilities.js';
+
 
 
 const createFinalOrder = (items) => {
@@ -17,14 +18,18 @@ const createFinalOrder = (items) => {
 
 const createOrderEvent = () => {
   const selectedCheeses = cheese.getSelectedCheeses();
-  console.log('getSelectedCheeses', selectedCheeses)
-  let domString = createFinalOrder(selectedCheeses);
+  const selectedBreads = bread.getSelectedBreads();
+  const selectedMeats = meat.getSelectedMeats();
+  const selectedVeggies = veggie.getSelectedVeggies();
+  const selectedCondiments = condiment.getSelectedCondiments();
+  
+  let domString = createFinalOrder(selectedCheeses, selectedBreads, selectedMeats, selectedVeggies, selectedCondiments);
   utilities.printToDom('order', domString)
 }
 
 
 const printOrderButton = () => {
-  const domString = `<button class="btn btn-secondary" id="order-button">Make Pizza</button>`
+  const domString = `<button class="btn btn-secondary" id="order-button">Add</button>`
   utilities.printToDom('final-order', domString);
   document.getElementById('order-button').addEventListener('click', createOrderEvent);
 };
