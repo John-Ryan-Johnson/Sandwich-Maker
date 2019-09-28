@@ -9,10 +9,15 @@ import utilities from '../helpers/utilities.js';
 
 const createFinalOrder = (items) => {
   let domString2 = '';
+  let totalPrice = 0;
   for(let i = 0; i < items.length; i++){
-    domString2 += `<h4>${items[i].name} $${items[i].price}</h4>`
-  } 
- return domString2
+    domString2 += `<h6>${items[i].name} $${(items[i].price/100).toFixed(2)}</h6>`
+                   
+    totalPrice += items[i].price
+  }
+  const priceString = (totalPrice/100).toFixed(2) 
+  utilities.printToDom("total", priceString)
+    return domString2
 }
 
 const createOrderEvent = () => {
@@ -24,7 +29,8 @@ const createOrderEvent = () => {
   const sandwichDone = selectedCheeses.concat(selectedBreads, selectedMeats, selectedVeggies, selectedCondiments);
   
   
-   let domString2 = createFinalOrder(sandwichDone);
+  let domString2 = createFinalOrder(sandwichDone);
+
   utilities.printToDom('order', domString2)
 }
 
