@@ -10,11 +10,10 @@ import utilities from '../helpers/utilities.js';
 const createFinalOrder = (items) => {
   let domString2 = '';
   for(let i = 0; i < items.length; i++){
-    domString2 += `<p>${items[i].name}</p>`
-  }
-  return domString2
+    domString2 += `<h4>${items[i].name} $${items[i].price}</h4>`
+  } 
+ return domString2
 }
-
 
 const createOrderEvent = () => {
   const selectedCheeses = cheese.getSelectedCheeses();
@@ -22,14 +21,16 @@ const createOrderEvent = () => {
   const selectedMeats = meat.getSelectedMeats();
   const selectedVeggies = veggie.getSelectedVeggies();
   const selectedCondiments = condiment.getSelectedCondiments();
+  const sandwichDone = selectedCheeses.concat(selectedBreads, selectedMeats, selectedVeggies, selectedCondiments);
   
-  let domString = createFinalOrder(selectedCheeses, selectedBreads, selectedMeats, selectedVeggies, selectedCondiments);
-  utilities.printToDom('order', domString)
+  
+   let domString2 = createFinalOrder(sandwichDone);
+  utilities.printToDom('order', domString2)
 }
 
 
 const printOrderButton = () => {
-  const domString = `<button class="btn btn-secondary" id="order-button">Add</button>`
+  const domString = `<button class="btn btn-secondary" id="order-button">Add to Cart</button>`
   utilities.printToDom('final-order', domString);
   document.getElementById('order-button').addEventListener('click', createOrderEvent);
 };

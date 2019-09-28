@@ -28,7 +28,7 @@ const printMeatOptions = () => {
   for(let i = 0; i < meats.length; i++){
      domString +=`<div class="form-group form-check">
     <input type="checkbox" class="form-check-input meat" id=${meats[i].id}>
-    <label class="form-check-label" for=${meats[i].id}">${meats[i].name}</label>
+    <label class="form-check-label ml-2" for=${meats[i].id}">${meats[i].name}</label>
   </div>`
 
   utilities.printToDom('meat-counter',domString )
