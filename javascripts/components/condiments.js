@@ -1,11 +1,11 @@
 import utilities from '../helpers/utilities.js'
 
 const condiments = [
-  {id:"condiment1", name:"Ranch", price:".50"},
-  {id:"condiment2", name:"Mustard", price:".50"},
-  {id:"condiment3", name:"Mayo", price:".60"},
-  {id:"condiment4", name:"Salt", price:".40"},
-  {id:"condiment5", name:"Pepper", price:".40"}
+  {id:"condiment1", name:"Ranch", price: 50},
+  {id:"condiment2", name:"Mustard", price: 50},
+  {id:"condiment3", name:"Mayo", price: 60},
+  {id:"condiment4", name:"Salt", price: 40},
+  {id:"condiment5", name:"Pepper", price: 40}
 ];
 
 const getSelectedCondiments = () => {
