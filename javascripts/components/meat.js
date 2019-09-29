@@ -2,7 +2,7 @@ import utilities from '../helpers/utilities.js'
 
 const meats = [
   {id:"meat1", name:"Turkey", price: 300},
-  {id:"meat2", name:"Ham", price: .300},
+  {id:"meat2", name:"Ham", price: 300},
   {id:"meat3", name:"Chicken", price: 300},
   {id:"meat4", name:"Tuna", price: 200},
   {id:"meat5", name:"Roast Beef", price: 350}

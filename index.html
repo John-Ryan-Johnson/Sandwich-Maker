@@ -2,43 +2,67 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <title>Sandwich Maker Exercise</title>
-  <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sandwich Maker Exercise</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
-  <h1 class="myTitle mb-5 mt-5">Sandwich Maker</h1>
-  <div class="container">
-    <div class="row">
-      <div class="card text-white bg-warning pl-1 pt-4 col-2 rounded-lg font-weight-bold" id="cheese-counter"></div>  
-      <div class="card text-white bg-primary pl-1 pt-4 col-2 rounded-lg font-weight-bold" id="bread-counter"></div>
-      <div class="card text-white bg-danger pl-1 pt-4 col-2 rounded-lg font-weight-bold" id="meat-counter"></div>
-      <div class="card text-white bg-success pl-1 pt-4 col-2 rounded-lg font-weight-bold" id="veggie-counter"></div>
-      <div class="card text-white bg-secondary pl-1 pt-4 col-2 rounded-lg font-weight-bold" id="condiment-counter"></div>
+    <h1 class="myTitle mb-5 mt-5">Sandwich Maker</h1>
+    <div class="container">
+        <div class="card-deck">
+            <div class="card text-center text-white bg-warning">
+                <div class="card-header">Cheeses</div>
+                <div class="card-body">
+                    <div id="cheese-counter"></div>
+                </div>
+            </div>
+            <div class="card text-center text-white bg-primary">
+                <div class="card-header">Breads</div>
+                <div class="card-body">
+                    <div id="bread-counter"></div>
+                </div>
+            </div>
+            <div class="card text-center text-white bg-danger">
+                <div class="card-header">Meats</div>
+                <div class="card-body">
+                    <div id="meat-counter"></div>
+                </div>
+            </div>
+            <div class="card text-center text-white bg-success">
+                <div class="card-header">Veggies</div>
+                <div class="card-body">
+                    <div id="veggie-counter"></div>
+                </div>
+            </div>
+            <div class="card text-center text-white bg-info">
+                <div class="card-header">Condiments</div>
+                <div class="card-body">
+                    <div id="condiment-counter"></div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row mt-5">
-      <div id="final-order"></div>
+    <div id="container2">
+        <div id="order"></div>
+        <div class="text-white" id="total"></div>
+        <div id="final-order"></div>
     </div>
-    <div id="order"></div>
-    <div id="total"></div>
-  </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script type="module" src="./javascripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./javascripts/main.js"></script>
 </body>
 
 </html>

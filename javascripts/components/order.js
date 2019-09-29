@@ -11,12 +11,13 @@ const createFinalOrder = (items) => {
   let domString2 = '';
   let totalPrice = 0;
   for(let i = 0; i < items.length; i++){
-    domString2 += `<h6>${items[i].name} $${(items[i].price/100).toFixed(2)}</h6>`
+    domString2 += `<h5 class="text-white mt-2">${items[i].name} $${(items[i].price/100).toFixed(2)}</h5>`
                    
     totalPrice += items[i].price
   }
-  const priceString = (totalPrice/100).toFixed(2) 
-  utilities.printToDom("total", priceString)
+
+  const priceString = (totalPrice/100).toFixed(2)
+  utilities.printToDom("total", "$" + priceString)
     return domString2
 }
 
